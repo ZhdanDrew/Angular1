@@ -32,4 +32,12 @@ export class UsersComponent {
     const userIndex = this.users.findIndex((u) => u.email === user.email);
     if (userIndex !== -1) this.selectedUser = this.users[userIndex];
   }
+
+  onDeleteClick() {
+    const userIndex = this.users.findIndex((u) => u.email === this.selectedUser.email);
+    if (userIndex !== -1) {
+        this.users.splice(userIndex, 1); // Remove the selected user from the array
+        this.selectedUser = this.users[0]; // Select the first user after deletion
+    }
+}
 }

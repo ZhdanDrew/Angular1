@@ -60,3 +60,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('p')?.textContent).toContain('Too big value');
   });
 });
+
